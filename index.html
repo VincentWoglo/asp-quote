@@ -723,6 +723,28 @@ html, body {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
+
+  @media print {
+  /* LOCK HERO TO ONE PDF PAGE */
+  .page-cover {
+    width: 8.5in;
+    height: 11in;
+    max-height: 11in;
+    overflow: hidden;
+
+    /* force page behavior */
+    page-break-after: always;
+    break-after: page;
+
+    /* prevent flex overflow weirdness */
+    display: flex;
+  }
+
+  /* safety to prevent accidental overflow from inner flex items */
+  .page-cover * {
+    max-height: 11in;
+  }
+}
  </style>
 </head>
 <body>
