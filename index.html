@@ -20,8 +20,12 @@
 /* =========================
    PRINT FOUNDATION (CRITICAL)
 ========================= */
-@page {
+/* @page {
   size: A4;
+  margin: 0;
+} */
+@page {
+  size: 10.42in 11.7in; /* matches your 1000px width */
   margin: 0;
 }
 
@@ -186,7 +190,7 @@ td, th {
 img {
   max-width: 100%;
 }
-  @media print {
+  @media only print {
   .quote-wrap {
     width: 100%;
     max-width: 100%;
